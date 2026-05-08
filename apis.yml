@@ -1,0 +1,29 @@
+aid: resy
+url: https://raw.githubusercontent.com/api-evangelist/resy/refs/heads/main/apis.yml
+name: Resy
+x-type: company
+description: >-
+  Resy is an American Express-owned restaurant reservation and discovery platform popular with high-end and chef-driven restaurants in major US markets.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Hospitality
+  - Restaurant
+  - Reservations
+  - American Express
+  - Booking
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://resy.com/
+  - type: Plans
+    url: plans/resy-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/resy-rate-limits.yml
+  - type: FinOps
+    url: finops/resy-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
