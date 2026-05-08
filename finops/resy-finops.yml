@@ -8,15 +8,13 @@ modified: '2026-05-08'
 reconciled: false
 tags:
 - Hospitality
-- Restaurant
 - Reservations
-- American Express
-- Booking
+- Restaurants
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Resy. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: FOCUS-aligned FinOps profile. Restaurants pay platform SaaS + per-cover network fees.
+notes: Owned by American Express; cross-promo with Amex card holders.
 sources:
 - https://resy.com/
 - https://focus.finops.org/focus-specification/v1-3/
@@ -29,12 +27,12 @@ alignedWith:
 publisherName: Resy
 serviceCategory: Hospitality
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Hybrid
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
-  - Usage
   - Purchase
+  - Usage
   - Adjustment
 focusColumns:
   ServiceName: Resy
@@ -45,13 +43,18 @@ focusColumns:
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: platform_saas
+  description: Monthly Resy OS subscription.
+  unit: subscription
   aggregation: sum
   dimensions:
-  - account
-  - resource
+  - restaurant
+- name: network_covers
+  description: Per-cover fees on Resy network bookings.
+  unit: cover
+  aggregation: sum
+  dimensions:
+  - restaurant
 principles:
 - name: Visibility
   description: Pull provider invoices or usage exports until a self-serve usage feed is documented.

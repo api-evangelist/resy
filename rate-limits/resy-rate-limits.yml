@@ -8,25 +8,23 @@ modified: '2026-05-08'
 reconciled: false
 tags:
 - Hospitality
-- Restaurant
 - Reservations
-- American Express
-- Booking
+- Restaurants
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for Resy. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: Rate limits are not publicly published; partner-specific.
+notes: Internal/undocumented endpoints should not be relied on.
 sources:
 - https://resy.com/
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+- name: Default Partner
+  scope: partner
+  metric: requests
+  limit: not publicly documented
+  notes: Per partner agreement.
 policies:
 - name: Backoff Strategy
   description: Clients should implement exponential backoff with jitter and honor any Retry-After header.

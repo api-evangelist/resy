@@ -1,6 +1,6 @@
 # Resy (resy)
 
-Resy is an American Express-owned restaurant reservation and discovery platform popular with high-end and chef-driven restaurants in major US markets.
+Resy is a restaurant reservation and discovery platform owned by American Express. Resy does not maintain a publicly self-serve developer portal; integration is restricted to approved partners (POS, CRM, marketing) under direct partnership agreements.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/resy/refs/heads/main/apis.yml)
 
@@ -8,7 +8,11 @@ Resy is an American Express-owned restaurant reservation and discovery platform 
 - **x-type:** company
 
 ## Tags
- - Hospitality, Restaurant, Reservations, American Express, Booking
+- Hospitality, Reservations, Restaurants
+
+## APIs
+- **Resy Partner API** — partner-only REST API; contact resy.com/partners for access.
+- **Resy Internal Web/Mobile API** — undocumented internal API at `https://api.resy.com`; not publicly supported.
 
 ## Timestamps
 - **Created:** 2026-05-08
@@ -16,9 +20,10 @@ Resy is an American Express-owned restaurant reservation and discovery platform 
 
 ## Common Properties
 - [Website](https://resy.com/)
-- [Plans](plans/resy-plans-pricing.yml) — placeholder, pipeline reconciles later
-- [RateLimits](rate-limits/resy-rate-limits.yml) — placeholder
-- [FinOps](finops/resy-finops.yml) — FOCUS-aligned placeholder
+- [Developer Portal](https://blog.resy.com/)
+- [Plans](plans/resy-plans-pricing.yml) — restaurant SaaS + per-cover; partner API contractual (reconciled: false)
+- [RateLimits](rate-limits/resy-rate-limits.yml) — per partner agreement (reconciled: false)
+- [FinOps](finops/resy-finops.yml) — FOCUS-aligned hybrid (reconciled: false)
 
 ## Maintainers
 **FN:** Kin Lane

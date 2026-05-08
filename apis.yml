@@ -2,28 +2,54 @@ aid: resy
 url: https://raw.githubusercontent.com/api-evangelist/resy/refs/heads/main/apis.yml
 name: Resy
 x-type: company
-description: >-
-  Resy is an American Express-owned restaurant reservation and discovery platform popular with high-end and chef-driven restaurants in major US markets.
+description: Resy is a restaurant reservation and discovery platform owned by American Express. Resy does
+  not maintain a publicly self-serve developer portal; integration is restricted to approved partners
+  (POS, CRM, marketing) under direct partnership agreements.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Hospitality
-  - Restaurant
-  - Reservations
-  - American Express
-  - Booking
+- Hospitality
+- Reservations
+- Restaurants
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
-common:
-  - type: Website
+apis:
+- aid: resy:partner-api
+  name: Resy Partner API
+  description: Partner-only REST API for reservations, availability, and restaurant metadata. Access is
+    granted through Resy's partnerships team (POS, CRM, loyalty integrations). No public developer portal.
+  humanURL: https://resy.com/partners
+  tags:
+  - REST
+  - Partner
+  - Reservations
+  properties:
+  - type: Partnerships
+    url: https://resy.com/partners
+- aid: resy:internal-web-api
+  name: Resy Internal Web/Mobile API (Undocumented)
+  description: Resy's web and mobile clients use an internal API at api.resy.com; this is not publicly
+    documented or supported and is subject to change without notice.
+  humanURL: https://resy.com/
+  baseURL: https://api.resy.com
+  tags:
+  - Internal
+  - Undocumented
+  - Mobile
+  properties:
+  - type: Note
     url: https://resy.com/
-  - type: Plans
-    url: plans/resy-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/resy-rate-limits.yml
-  - type: FinOps
-    url: finops/resy-finops.yml
+common:
+- type: Website
+  url: https://resy.com/
+- type: Developer
+  url: https://blog.resy.com/
+- type: Plans
+  url: plans/resy-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/resy-rate-limits.yml
+- type: FinOps
+  url: finops/resy-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
