@@ -1,7 +1,7 @@
 aid: resy
 url: https://raw.githubusercontent.com/api-evangelist/resy/refs/heads/main/apis.yml
 name: Resy
-x-type: company
+kind: company
 description: Resy is a restaurant reservation and discovery platform owned by American Express. Resy does
   not maintain a publicly self-serve developer portal; integration is restricted to approved partners
   (POS, CRM, marketing) under direct partnership agreements.
