@@ -54,6 +54,8 @@ common:
     url: rate-limits/resy-rate-limits.yml
   - type: FinOps
     url: finops/resy-finops.yml
+  - type: LLMsTxt
+    url: https://resy.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
