@@ -4,32 +4,56 @@ name: Resy
 kind: company
 description: Resy is a restaurant reservation and discovery platform owned by American Express. Resy does
   not maintain a publicly self-serve developer portal; integration is restricted to approved partners
-  (POS, CRM, marketing) under direct partnership agreements.
+  (POS, CRM, loyalty, marketing, and discovery) under direct partnership agreements. The primary public
+  surface is the consumer web and mobile app and an embeddable "Book with Resy" booking widget for
+  restaurants. The unofficial internal client API at api.resy.com has been widely reverse-engineered by
+  the community, but it is undocumented, unsupported, and may change without notice.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Hospitality
   - Reservations
   - Restaurants
+  - Dining
+  - Booking
 created: '2026-05-08'
-modified: '2026-05-08'
+modified: '2026-06-03'
 specificationVersion: '0.19'
 apis:
   - aid: resy:partner-api
     name: Resy Partner API
     description: Partner-only REST API for reservations, availability, and restaurant metadata. Access is
-      granted through Resy's partnerships team (POS, CRM, loyalty integrations). No public developer portal.
-    humanURL: https://resy.com/partners
+      granted through Resy's partnerships team for approved POS, CRM, loyalty, and discovery integrations.
+      No public developer portal or self-serve signup; no public OpenAPI specification is published.
+    humanURL: https://resy.com/join/integrations/
     tags:
     - REST
     - Partner
     - Reservations
     properties:
-    - type: Partnerships
-      url: https://resy.com/partners
+    - type: Partners
+      url: https://resy.com/join/integrations/
+    - type: Contact
+      url: mailto:api@resy.com
+  - aid: resy:booking-widget
+    name: Resy Booking Widget
+    description: Embeddable "Book with Resy" booking button/widget that restaurants and partners can place
+      on their own websites to drive reservations into Resy. This is the primary publicly available
+      integration surface; it is a hosted widget rather than a documented programmatic API.
+    humanURL: https://resy.com/join/integrations/
+    tags:
+    - Widget
+    - Embed
+    - Reservations
+    properties:
+    - type: Documentation
+      url: https://helpdesk.resy.com/en_us/booking-button-installation-Skx_7ueNo
+      title: Booking Button Installation
   - aid: resy:internal-web-api
     name: Resy Internal Web/Mobile API (Undocumented)
-    description: Resy's web and mobile clients use an internal API at api.resy.com; this is not publicly
-      documented or supported and is subject to change without notice.
+    description: Resy's web and mobile clients communicate with an internal API at api.resy.com. This API is
+      not publicly documented or supported, requires credentials extracted from a logged-in session, and is
+      subject to change without notice. The community has reverse-engineered it; the libraries referenced
+      below are unofficial and not affiliated with or endorsed by Resy.
     humanURL: https://resy.com/
     baseURL: https://api.resy.com
     tags:
@@ -37,25 +61,69 @@ apis:
     - Undocumented
     - Mobile
     properties:
-    - type: Note
-      url: https://resy.com/
+    - type: CodeExamples
+      url: https://github.com/lgrees/resy-cli
+      title: resy-cli (Community, Unofficial - Go)
+    - type: CodeExamples
+      url: https://github.com/jeffknaide/resy-bot
+      title: resy-bot (Community, Unofficial - Python)
+    - type: CodeExamples
+      url: https://github.com/Alkaar/resy-booking-bot
+      title: resy-booking-bot (Community, Unofficial - Scala)
 common:
+  - type: Portal
+    url: https://resy.com/
+  - type: Blog
+    url: https://blog.resy.com/
+  - type: Partners
+    url: https://resy.com/join/integrations/
+  - type: Contact
+    url: mailto:api@resy.com
   - type: GitHubOrganization
     url: https://github.com/resy
   - type: LinkedIn
     url: https://www.linkedin.com/company/resy-inc
-  - type: Website
-    url: https://resy.com/
-  - type: Developer
-    url: https://blog.resy.com/
   - type: Plans
     url: plans/resy-plans-pricing.yml
   - type: RateLimits
     url: rate-limits/resy-rate-limits.yml
   - type: FinOps
     url: finops/resy-finops.yml
-  - type: LLMsTxt
-    url: https://resy.com/llms.txt
+  - type: Features
+    data:
+    - name: Reservation Management
+      description: Online table reservations, waitlists, and notify lists for diners and restaurants.
+    - name: Restaurant Discovery
+      description: Editorial dining guides, curated lists (e.g. the Resy 100), and search across cities.
+    - name: Resy OS
+      description: Restaurant-facing operating system for table, guest, and reservation management.
+    - name: Booking Widget
+      description: Embeddable "Book with Resy" button restaurants place on their own sites.
+    - name: Guest CRM and Notifications
+      description: Guestbook, guest communications, and reservation notifications.
+  - type: UseCases
+    data:
+    - name: Embed Reservations on a Restaurant Site
+      description: Add the "Book with Resy" booking button to a restaurant website to capture bookings.
+    - name: Sync Reservations with POS and CRM
+      description: Approved partners synchronize reservation, guest, and reporting data with POS/CRM systems.
+    - name: Discovery and Marketing Distribution
+      description: Surface restaurant availability through Resy and partner discovery channels.
+  - type: Integrations
+    data:
+    - name: POS Systems
+      description: Toast, Square, Lightspeed, Aloha, Micros Simphony, Micros 3700, Heartland Xpient, Positouch,
+        Squirrel, Lavu, Maitre D.
+    - name: Events and Bookings
+      description: Tripleseat for private events and group bookings.
+    - name: CRM and Guest Management
+      description: Loyalist, Fishbowl CRM, Bloom Intelligence.
+    - name: Discovery and Distribution
+      description: Reserve with Google, MICHELIN, The Infatuation, Meta, Anthropic, Wine Enthusiast.
+    - name: Analytics
+      description: Google Analytics.
+    - name: Winery and eCommerce
+      description: WineDirect, Commerce7.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
