@@ -1,0 +1,21 @@
+{
+  "repo": "resy",
+  "feeds": [
+    {
+      "source": "https://blog.resy.com/feed/",
+      "feed_url": "https://blog.resy.com/feed/",
+      "title": "",
+      "saved": 9,
+      "method": "feed"
+    },
+    {
+      "source": "https://resy.com/",
+      "feed_url": "https://resy.com/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 15,
+  "fetched": "2026-06-14T20:42:17Z"
+}
