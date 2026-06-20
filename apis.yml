@@ -8,7 +8,7 @@ description: Resy is a restaurant reservation and discovery platform owned by Am
   surface is the consumer web and mobile app and an embeddable "Book with Resy" booking widget for
   restaurants. The unofficial internal client API at api.resy.com has been widely reverse-engineered by
   the community, but it is undocumented, unsupported, and may change without notice.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Hospitality
   - Reservations
