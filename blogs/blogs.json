@@ -5,7 +5,14 @@
       "source": "https://blog.resy.com/feed/",
       "feed_url": "https://blog.resy.com/feed/",
       "title": "",
-      "saved": 9,
+      "saved": 10,
+      "method": "feed"
+    },
+    {
+      "source": "https://resy.com/blog/feed/",
+      "feed_url": "https://resy.com/blog/feed/",
+      "title": "",
+      "saved": 0,
       "method": "feed"
     },
     {
@@ -16,6 +23,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 15,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 35,
+  "fetched": "2026-06-27T12:03:07Z"
 }
