@@ -100,6 +100,8 @@ apis:
       url: https://github.com/Alkaar/resy-booking-bot
       title: resy-booking-bot (Community, Unofficial - Scala)
 common:
+  - type: Website
+    url: https://www.resy.com/
   - type: DomainSecurity
     url: security/resy-domain-security.yml
   - type: Portal
