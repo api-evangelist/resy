@@ -56,6 +56,10 @@ apis:
     humanURL: https://resy.com/join/integrations/
     tags:
     - REST
+    - Partners
+    - Reservations
+    tags_raw:
+    - REST
     - Partner
     - Reservations
     properties:
@@ -70,6 +74,10 @@ apis:
       integration surface; it is a hosted widget rather than a documented programmatic API.
     humanURL: https://resy.com/join/integrations/
     tags:
+    - Widgets
+    - Embed
+    - Reservations
+    tags_raw:
     - Widget
     - Embed
     - Reservations
