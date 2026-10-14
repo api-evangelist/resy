@@ -1,10 +1,29 @@
 generated: '2026-10-14'
 method: searched
 checked:
+- olo/integrations/olo-integration-edges.yml
 - square/integrations/square-integration-edges.yml
+- toast/integrations/toast-integration-edges.yml
 source:
 - square/integrations/square-integration-edges.yml
 edges:
+- partner_name: Olo (own)
+  partner: olo
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.olo.com/partners/resy
+  mirror_of: olo/integrations/olo-integration-edges.yml
+  apps:
+  - Resy
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Omivore
 - partner_name: Square (own)
   partner: square
   partner_match: mirror
@@ -22,3 +41,20 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: New apps
+- partner_name: Toast (own)
+  partner: toast
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://pos.toasttab.com/partners/directory/resy
+  mirror_of: toast/integrations/toast-integration-edges.yml
+  apps:
+  - Resy
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Reservations
